@@ -2,7 +2,7 @@
 
 const express = require("express");
 const bodyParser = require('body-parser');
-const router = require("./index");
+const router = require("../index");
 
 // Inicializamos la aplicación de Express
 const app = express();

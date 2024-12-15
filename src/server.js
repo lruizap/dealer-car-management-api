@@ -2,10 +2,10 @@
 
 const app = require("./app");
 
-// Definimos el puerto del servidor
+// Define the port
 const port = process.env.PORT || 8080;
 
-// Arrancamos el servidor
+// Start the server
 app.listen(port, () => {
-  console.log(`Servidor desplegado en el puerto: ${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });

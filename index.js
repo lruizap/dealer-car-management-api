@@ -1,21 +1,20 @@
-// index.js
+// src/index.js
 
 const express = require("express");
 const router = express.Router();
 
-// Rutas de coches
-router.use("/coches", require("./routes/coches/getCoches"));
-router.use("/coches", require("./routes/coches/postCoches"));
-router.use("/coches", require("./routes/coches/getCocheById"));
-router.use("/coches", require("./routes/coches/putCocheById"));
-router.use("/coches", require("./routes/coches/deleteCocheById"));
+// Dealer routes
+router.use("/concesionarios", require("./src/routes/concesionarios/getConcesionarios"));
+router.use("/concesionarios", require("./src/routes/concesionarios/postConcesionarios"));
+router.use("/concesionarios", require("./src/routes/concesionarios/getConcesionarioById"));
+router.use("/concesionarios", require("./src/routes/concesionarios/putConcesionarioById"));
+router.use("/concesionarios", require("./src/routes/concesionarios/deleteConcesionarioById"));
 
-// Rutas de concesionarios
-router.use("/concesionarios", require("./routes/concesionarios/getConcesionarios"));
-router.use("/concesionarios", require("./routes/concesionarios/postConcesionarios"));
-router.use("/concesionarios", require("./routes/concesionarios/getConcesionarioById"));
-router.use("/concesionarios", require("./routes/concesionarios/putConcesionarioById"));
-router.use("/concesionarios", require("./routes/concesionarios/deleteConcesionarioById"));
-
+// Car routes
+router.use("/concesionarios/:id/coches", require("./src/routes/coches/getCoches"));
+router.use("/concesionarios/:id/coches", require("./src/routes/coches/postCoches"));
+router.use("/concesionarios/:id/coches/:id", require("./src/routes/coches/getCocheById"));
+router.use("/concesionarios/:id/coches/:id", require("./src/routes/coches/putCocheById"));
+router.use("/concesionarios/:id/coches/:id", require("./src/routes/coches/deleteCocheById"));
 
 module.exports = router;
