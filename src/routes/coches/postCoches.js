@@ -20,9 +20,10 @@ router.post("/", (req, res) => {
 
   // Crear un nuevo coche con un ID único dentro del concesionario
   const nuevoCoche = {
-    id: concesionario.coches.length > 0 ? concesionario.coches[concesionario.coches.length - 1].id + 1 : 1,
+    id: concesionario.coches.reduce((maxId, coche) => Math.max(maxId, coche.id), 0) + 1,
     ...req.body,
   };
+
 
   // Agregar el nuevo coche al listado de coches del concesionario
   concesionario.coches.push(nuevoCoche);
