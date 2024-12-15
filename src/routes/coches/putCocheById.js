@@ -5,7 +5,7 @@ const router = express.Router();
 const coches = require("../../models/coches");
 
 // Actualizar un coche por ID
-router.put("/:id", (req, res) => {
+router.put("/:cocheId", (req, res) => {
   const id = parseInt(req.params.id);
   const index = coches.findIndex((c) => c.id === id);
 

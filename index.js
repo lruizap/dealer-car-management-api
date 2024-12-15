@@ -13,8 +13,8 @@ router.use("/concesionarios", require("./src/routes/concesionarios/deleteConcesi
 // Car routes
 router.use("/concesionarios/:id/coches", require("./src/routes/coches/getCoches"));
 router.use("/concesionarios/:id/coches", require("./src/routes/coches/postCoches"));
-router.use("/concesionarios/:id/coches/:id", require("./src/routes/coches/getCocheById"));
-router.use("/concesionarios/:id/coches/:id", require("./src/routes/coches/putCocheById"));
-router.use("/concesionarios/:id/coches/:id", require("./src/routes/coches/deleteCocheById"));
+router.use("/concesionarios/:id/coches/:cocheId", require("./src/routes/coches/getCocheById"));
+router.use("/concesionarios/:id/coches/:cocheId", require("./src/routes/coches/putCocheById"));
+router.use("/concesionarios/:id/coches/:cocheId", require("./src/routes/coches/deleteCocheById"));
 
 module.exports = router;

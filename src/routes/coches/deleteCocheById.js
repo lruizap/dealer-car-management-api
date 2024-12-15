@@ -5,7 +5,7 @@ const router = express.Router();
 const coches = require("../../models/coches");
 
 // Borrar un coche por ID
-router.delete("/:id", (req, res) => {
+router.delete("/:cocheId", (req, res) => {
   const id = parseInt(req.params.id);
   const index = coches.findIndex((c) => c.id === id);
 

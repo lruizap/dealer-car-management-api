@@ -6,8 +6,8 @@ let concesionarios = [
     nombre: "Concesionario A",
     direccion: "Calle Falsa 123",
     coches: [
-      { id: 1, modelo: "Clio", cv: 75, precio: 15000 },
-      { id: 2, modelo: "Megane", cv: 100, precio: 20000 },
+      { cocheId: 1, modelo: "Clio", cv: 75, precio: 15000 },
+      { cocheId: 2, modelo: "Megane", cv: 100, precio: 20000 },
     ],
   },
   {
@@ -15,7 +15,7 @@ let concesionarios = [
     nombre: "Concesionario B",
     direccion: "Avenida Real 456",
     coches: [
-      { id: 3, modelo: "Focus", cv: 90, precio: 18000 },
+      { cocheId: 3, modelo: "Focus", cv: 90, precio: 18000 },
     ],
   },
 ];
